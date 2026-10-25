@@ -84,10 +84,6 @@ colonial_ideas = {
 	start = {
 		development_cost = -0.1
 		no_religion_penalty = yes
-		global_regiment_cost = 10
-		land_maintenance_modifier = 10
-		naval_maintenance_modifier = 10
-		global_ship_cost = 10
 	}
 	
 	bonus = {

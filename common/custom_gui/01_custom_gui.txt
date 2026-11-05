@@ -797,6 +797,83 @@ custom_button = {
         }
         FROM = { treasury = 500 }
         num_free_building_slots = 1
+        custom_trigger_tooltip = {
+            tooltip = nazy_investments_trigger_tt
+            hidden_trigger = {
+                OR = {
+                    AND = {
+                        OR = {
+                            trade_goods = naval_supplies
+                            trade_goods = fish
+                            trade_goods = salt
+                        }
+                        FROM = { dip_tech = 11 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = copper
+                            trade_goods = iron
+                        }
+                        FROM = { mil_tech = 11 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = wool
+                            trade_goods = cloth
+                            trade_goods = silk
+                            trade_goods = dyes
+                        }
+                        FROM = { adm_tech = 11 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = coffee
+                            trade_goods = cotton
+                            trade_goods = sugar
+                            trade_goods = tobacco
+                            trade_goods = tea
+                            trade_goods = cocoa
+                        }
+                        FROM = { adm_tech = 14 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = grain
+                            trade_goods = livestock
+                            trade_goods = wine
+                        }
+                        FROM = { adm_tech = 6 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = paper
+                            trade_goods = gems
+                            trade_goods = tropical_wood
+                            trade_goods = chinaware
+                            trade_goods = glass
+                        }
+                        FROM = { adm_tech = 16 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = coal
+                        }
+                        FROM = { adm_tech = 21 }
+                    }
+                    AND = {
+                        OR = {
+                            trade_goods = ivory
+                            trade_goods = slaves
+                            trade_goods = spices
+                            trade_goods = cloves
+                            trade_goods = fur
+                            trade_goods = incense
+                        }
+                        FROM = { dip_tech = 14 }
+                    }
+                }
+            }
+        }
     }
     effect = {
         if = {

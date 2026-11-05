@@ -70,3 +70,22 @@
 
  #Exploit Admin Development
  nazy_exploit_admin_dev_tt:0 "Exploiting Development will give us the following effects:"
+
+ #Allied Investments
+ nazy_investments_countinghouse_tt:0 "Invest in Allied Counting Houses"
+ nazy_investments_workshop_tt:0 "Invest in Allied Workshops"
+ nazy_investments_stockexchange_tt:0 "Invset in Allied Stock Exchanges"
+ nazy_investments_tradedepot_tt:0 "Invest in Allied Trade Depots"
+ nazy_investments_marketplace_tt:0 "Invest in Allied Marketplaces"
+ nazy_investments_manufactory_tt:0 "Invest in Allied Manufactories"
+
+ nazy_investments_trigger_tt:0 "Sufficient §Ytechnology level§! for goods produced in province"
+
+ nazy_inv_req_wharf_tt:0 "Naval supplies, fish or salt province and Diplomatic Technology 11"
+ nazy_inv_req_weapons_tt:0 "Copper or iron province and Military Technology 11"
+ nazy_inv_req_textile_tt:0 "Wool, cloth, silk or dyes province and Administrative Technology 11"
+ nazy_inv_req_plantations_tt:0 "Coffee, cotton, sugar, tobacco, tea or cocoa province and Administrative Technology 14"
+ nazy_inv_req_farm_tt:0 "Grain, livestock or wine province and Administrative Technology 6"
+ nazy_inv_req_mills_tt:0 "Paper, gems, tropical wood, chinaware or glass province and Administrative Technology 16"
+ nazy_inv_req_furnace_tt:0 "Coal province and Administrative Technology 21"
+ nazy_inv_req_tradecompany_tt:0 "Ivory, slaves, spices, cloves, fur or incense province and Diplomatic Technology 14"

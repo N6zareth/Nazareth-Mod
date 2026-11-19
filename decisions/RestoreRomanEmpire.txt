@@ -25,26 +25,31 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
+			BYZ_roman_empire_decision_trigger = yes
 			OR = {
 				region = italy_region
-				region = egypt_region
-				area = carniola_area
+			#	region = egypt_region
+			#	area = carniola_area
+				province_id = 118
+				province_id = 114
+				province_id = 151
 				province_id = 2313
+				province_id = 341
 				area = thrace_area
 				area = macedonia_area
 				area = northern_greece_area
 				area = morea_area
-				area = tunisia_area
-				area = djerba_area
-				area = kabylia_area
-				area = provence_area
-				area = savoy_dauphine_area
-				area = languedoc_area
-				area = catalonia_area
-				area = aragon_area
-				area = valencia_area
-				area = corsica_sardinia_area
-				area = baleares_area
+			#	area = tunisia_area
+			#	area = djerba_area
+			#	area = kabylia_area
+			#	area = provence_area
+			#	area = savoy_dauphine_area
+			#	area = languedoc_area
+			#	area = catalonia_area
+			#	area = aragon_area
+			#	area = valencia_area
+			#	area = corsica_sardinia_area
+			#	area = baleares_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -57,13 +62,23 @@ country_decisions = {
 			owns_all_provinces = {
 				region = italy_region
 			}
-			owns_all_provinces = {
-				region = egypt_region
+			#owns_all_provinces = {
+			#	region = egypt_region
+			#}
+			#owns_all_provinces = {
+			#	area = carinthia_area
+			#}
+			#owns = 2313
+			#owns = 358
+			#owns = 361
+		
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = BYZ_highlighted_by_decision
+					BYZ_roman_empire_decision_trigger = yes
+				}
+				value = 150 #450 by default
 			}
-			owns_all_provinces = {
-				area = carinthia_area
-			}
-			owns = 2313
 			AND = {
 				custom_trigger_tooltip = {
 					tooltip = nazy_spqr_greece_tt
@@ -81,84 +96,104 @@ country_decisions = {
 					}
 				}
 			}
+			#AND = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = nazy_spqr_tunis_tt
+			#		owns_all_provinces = {
+			#			area = tunisia_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = djerba_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = kabylia_area
+			#		}
+			#	}
+			#}
 			AND = {
 				custom_trigger_tooltip = {
-					tooltip = nazy_spqr_tunis_tt
-					owns_all_provinces = {
-						area = tunisia_area
+					tooltip = Nazy_SPQR_tt
+					118 = { # Rome
+						owned_by = ROOT
 					}
-					owns_all_provinces = {
-						area = djerba_area
+					114 = { # Ravenna
+						owned_by = ROOT
 					}
-					owns_all_provinces = {
-						area = kabylia_area
+					151 = { # Constantinople
+						owned_by = ROOT
 					}
-				}
-			}
-			AND = {
-				custom_trigger_tooltip = {
-					tooltip = nazy_spqr_fra_tt
-					owns_all_provinces = {
-						area = provence_area
+					2313 = { # Antioch
+						owned_by = ROOT
 					}
-					owns_all_provinces = {
-						area = savoy_dauphine_area
-					}
-					owns_all_provinces = {
-						area = languedoc_area
+					341 = { #Tunis
+						owned_by = ROOT
 					}
 				}
 			}
-			AND = {
-				custom_trigger_tooltip = {
-					tooltip = nazy_spqr_ara_tt
-					owns_all_provinces = {
-						area = catalonia_area
-					}
-					owns_all_provinces = {
-						area = aragon_area
-					}
-					owns_all_provinces = {
-						area = valencia_area
-					}
-					owns_all_provinces = {
-						area = corsica_sardinia_area
-					}
-					owns_all_provinces = {
-						area = baleares_area
-					}
-				}
-			}
-			OR = {
-				is_emperor = yes
-				custom_trigger_tooltip = {
-					tooltip = nazy_rome_tt_1
-					AND = {
-						total_development = emperor
-						emperor = {
-							humiliated_by = ROOT
-						}
-					}
-				}
-				OR = {
-					custom_trigger_tooltip = {
-						tooltip = nazy_rome_tt_2
-						AND = {
-							NOT = { hre_size = 1 } 
-							NOT = { exists = HLR }
-						}
-					}
-					custom_trigger_tooltip = {
-						tooltip = nazy_rome_tt_3
-						AND = {
-								total_development = HLR
-							HLR = {
-								humiliated_by = ROOT
-							}
-						}
-					}
-				}
-			}
+			#AND = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = nazy_spqr_fra_tt
+			#		owns_all_provinces = {
+			#			area = provence_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = savoy_dauphine_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = languedoc_area
+			#		}
+			#	}
+			#}
+			#AND = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = nazy_spqr_ara_tt
+			#		owns_all_provinces = {
+			#			area = catalonia_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = aragon_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = valencia_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = corsica_sardinia_area
+			#		}
+			#		owns_all_provinces = {
+			#			area = baleares_area
+			#		}
+			#	}
+			#}
+			#OR = {
+			#	is_emperor = yes
+			#	custom_trigger_tooltip = {
+			#		tooltip = nazy_rome_tt_1
+			#		AND = {
+			#			total_development = emperor
+			#			emperor = {
+			#				humiliated_by = ROOT
+			#			}
+			#		}
+			#	}
+			#	OR = {
+			#		custom_trigger_tooltip = {
+			#			tooltip = nazy_rome_tt_2
+			#			AND = {
+			#				NOT = { hre_size = 1 } 
+			#				NOT = { exists = HLR }
+			#			}
+			#		}
+			#		custom_trigger_tooltip = {
+			#			tooltip = nazy_rome_tt_3
+			#			AND = {
+			#					total_development = HLR
+			#				HLR = {
+			#					humiliated_by = ROOT
+			#				}
+			#			}
+			#		}
+			#	}
+			#}
 		}
 		effect = {
 			118 = {

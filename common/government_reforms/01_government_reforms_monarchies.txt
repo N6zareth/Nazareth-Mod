@@ -435,7 +435,7 @@ empire_francaise_reform = {
 		max_absolutism = 10
 		fire_damage = 0.1
 		shock_damage_received = -0.1
-		artillery_fire = 0.5
+		artillery_fire = 0.1
 		leader_land_fire = 1
 		max_general_fire = 1
 	}

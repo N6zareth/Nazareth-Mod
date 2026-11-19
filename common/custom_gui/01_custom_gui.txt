@@ -660,16 +660,27 @@ custom_button = {
     }
     trigger = {
         NOT = { has_building = counting_house }
+        NOT = { construction_progress = 0 }
         FROM = {
-            treasury = 100
+            treasury = 300
             adm_tech = 24
             }
-        num_free_building_slots = 1
+        OR = {
+            num_free_building_slots = 1
+            has_building = workshop
+        }
     }
     effect = {
-        add_building = counting_house
-        remove_building = workshop
-        FROM = { add_treasury = -100 }
+        province_event = {
+            id = nazy_allied_investments.1
+        }
+        add_building_construction = {
+            building = counting_house
+            cost = 0
+            speed = 0.75
+        }
+        #remove_building = workshop
+        FROM = { add_treasury = -300 }
     }
 }
 
@@ -685,15 +696,23 @@ custom_button = {
     trigger = {
         NOT = { has_building = workshop }
         NOT = { has_building = counting_house }
+        NOT = { construction_progress = 0 }
         FROM = {
-            treasury = 400
+            treasury = 80
             adm_tech = 6
-            }
+        }
         num_free_building_slots = 1
     }
     effect = {
-        add_building = workshop
-        FROM = { add_treasury = -400 }
+        province_event = {
+            id = nazy_allied_investments.2
+        }
+        add_building_construction = {
+            building = workshop
+            cost = 0
+            speed = 0.75
+        }
+        FROM = { add_treasury = -80 }
     }
 }
 
@@ -708,17 +727,27 @@ custom_button = {
     }
     trigger = {
         NOT = { has_building = stock_exchange }
+        NOT = { construction_progress = 0 }
         FROM = {
-            treasury = 400
+            treasury = 300
             dip_tech = 22
             }
-        num_free_building_slots = 1
+        OR = {
+            num_free_building_slots = 1
+            has_building = marketplace
+            has_building = stock_exchange
+        }
     }
     effect = {
-        add_building = stock_exchange
-        remove_building = trade_depot
-        remove_building = marketplace
-        FROM = { add_treasury = -400 }
+        province_event = {
+            id = nazy_allied_investments.3
+        }
+        add_building_construction = {
+            building = stock_exchange
+            cost = 0
+            speed = 0.75
+        }
+        FROM = { add_treasury = -300 }
     }
 }
 
@@ -734,16 +763,26 @@ custom_button = {
     trigger = {
         NOT = { has_building = trade_depot }
         NOT = { has_building = stock_exchange }
+        NOT = { construction_progress = 0 }
         FROM = {
             treasury = 300
             dip_tech = 17
             }
-        num_free_building_slots = 1
+        OR = {
+            num_free_building_slots = 1
+            has_building = marketplace
+        }
     }
     effect = {
-        add_building = trade_depot
-        remove_building = marketplace
-        FROM = { add_treasury = -300 }
+        province_event = {
+            id = nazy_allied_investments.4
+        }
+        add_building_construction = {
+            building = trade_depot
+            cost = 0
+            speed = 0.75
+        }
+        FROM = { add_treasury = -200 }
     }
 }
 
@@ -760,15 +799,23 @@ custom_button = {
         NOT = { has_building = marketplace }
         NOT = { has_building = trade_depot }
         NOT = { has_building = stock_exchange }
+        NOT = { construction_progress = 0 }
         FROM = {
-            treasury = 100
+            treasury = 75
             dip_tech = 4
         }
         num_free_building_slots = 1
     }
     effect = {
-        add_building = workshop
-        FROM = { add_treasury = -100 }
+        province_event = {
+            id = nazy_allied_investments.5
+        }
+        add_building_construction = {
+            building = marketplace
+            cost = 0
+            speed = 0.75
+        }
+        FROM = { add_treasury = -75 }
     }
 }
 
@@ -795,7 +842,8 @@ custom_button = {
 
             }
         }
-        FROM = { treasury = 500 }
+        NOT = { construction_progress = 0 }
+        FROM = { treasury = 400 }
         num_free_building_slots = 1
         custom_trigger_tooltip = {
             tooltip = nazy_investments_trigger_tt
@@ -885,8 +933,12 @@ custom_button = {
                 }
                 FROM = { dip_tech = 11 }
             }
-            add_building = wharf
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = wharf
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -896,8 +948,12 @@ custom_button = {
                 }
                 FROM = { mil_tech = 11 }
             }
-            add_building = weapons
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = weapons
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -909,7 +965,11 @@ custom_button = {
                 }
                 FROM = { adm_tech = 11 }
             }
-            add_building = textile
+            add_building_construction {
+                building = textile
+                cost = 0
+                speed = 0.6
+            }
             FROM = { add_treasury = -500 }
         }
         if = {
@@ -924,8 +984,12 @@ custom_button = {
                 }
                 FROM = { adm_tech = 14 }
             }
-            add_building = plantations
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = plantations
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -936,8 +1000,12 @@ custom_button = {
                 }
                 FROM = { adm_tech = 6 }
             }
-            add_building = farm_estate
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = farm_estate
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -950,8 +1018,12 @@ custom_button = {
                 }
                 FROM = { adm_tech = 16 }
             }
-            add_building = mills
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = mills
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -960,8 +1032,12 @@ custom_button = {
                 }
                 FROM = { adm_tech = 21 }
             }
-            add_building = furnace
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = furnace
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
         if = {
             limit = {
@@ -975,8 +1051,12 @@ custom_button = {
                 }
                 FROM = { dip_tech = 14 }
             }
-            add_building = tradecompany
-            FROM = { add_treasury = -500 }
+            add_building_construction {
+                building = tradecompany
+                cost = 0
+                speed = 0.6
+            }
+            FROM = { add_treasury = -400 }
         }
     }
 }

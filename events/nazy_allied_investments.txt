@@ -1,0 +1,79 @@
+namespace = nazy_allied_investments
+
+# Counting Houses
+province_event = {
+    id = nazy_allied_investments.1
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.1.desc
+    picture = URBANIZATION_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}
+
+# Workshop
+province_event = {
+    id = nazy_allied_investments.2
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.2.desc
+    picture = URBANIZATION_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}
+
+# Stock Exchange
+province_event = {
+    id = nazy_allied_investments.3
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.3.desc
+    picture = HOUSE_OF_TRADE_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}
+
+# Trade Depot
+province_event = {
+    id = nazy_allied_investments.4
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.4.desc
+    picture = HOUSE_OF_TRADE_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}
+
+# Market Place
+province_event = {
+    id = nazy_allied_investments.5
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.5.desc
+    picture = HOUSE_OF_TRADE_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}
+
+# Manufactory
+province_event = {
+    id = nazy_allied_investments.6
+    title = nazy_allied_investments.1.t
+    desc = nazy_allied_investments.6.desc
+    picture = TEXTILE_INDUSTRY_eventPicture
+    is_triggered_only = yes
+
+    option = {
+        name = nazy_allied_investments.1.a
+    }
+}

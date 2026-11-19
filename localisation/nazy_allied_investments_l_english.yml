@@ -1,0 +1,10 @@
+﻿l_english:
+
+ nazy_allied_investments.1.t: "Allied Investments"
+ nazy_allied_investments.1.a: "I see."
+ nazy_allied_investments.1.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §YCounting House§! in §Y[Root.Province.GetName]§!."
+ nazy_allied_investments.2.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §YWorkshop§! in §Y[Root.Province.GetName]§!."
+ nazy_allied_investments.3.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §YStock Exchange§! in §Y[Root.Province.GetName]§!."
+ nazy_allied_investments.4.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §YTrade Depot§! in §Y[Root.Province.GetName]§!."
+ nazy_allied_investments.5.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §YMarketplace§! in §Y[Root.Province.GetName]§!."
+ nazy_allied_investments.6.desc: "Your ally of @[From.GetTag] §Y[From.GetName]§! has invested a §RManufactory§! in §Y[Root.Province.GetName]§!."

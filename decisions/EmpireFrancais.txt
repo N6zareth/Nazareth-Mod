@@ -7,6 +7,7 @@ country_decisions = {
 				has_country_flag = has_nazy_empire_francaise
 			}
 			tag = FRA
+			government = monarchy
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -30,6 +31,7 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			government = monarchy
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no

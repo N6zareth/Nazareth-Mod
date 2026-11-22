@@ -5084,6 +5084,7 @@ french_missions_5_normal = {
 								who = ROOT
 								modifier = insulted
 							}
+							exists = no
 						}
 					}
 				}

@@ -581,30 +581,24 @@ custom_button = {
     name = nazy_all_seats_parliament
     tooltip = nazy_all_seats_parliament_tt
     potential = {
-        FROM = {
-			ai = no
-			has_parliament = yes
-		}
+		has_parliament = yes
     }
     trigger = {
         custom_trigger_tooltip = {
             tooltip = nazy_all_seats_parliament_tt2
-            FROM = {
-                any_owned_province = {
-				    has_seat_in_parliament = no
-			    }
-            }
+            any_owned_province = {
+			    has_seat_in_parliament = no
+                is_state = yes
+		    }
         }
     }
     effect = {
-        FROM = {
-			every_owned_province = {
-				limit = {
-					has_seat_in_parliament = no
-					is_state = yes
-				}
-				set_seat_in_parliament = yes
+		every_owned_province = {
+			limit = {
+				has_seat_in_parliament = no
+				is_state = yes
 			}
+			set_seat_in_parliament = yes
 		}
     }
 }
